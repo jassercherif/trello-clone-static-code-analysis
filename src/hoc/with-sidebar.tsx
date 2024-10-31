@@ -31,11 +31,12 @@ const withSidebar = (App, props) => {
       const { page } = props;
 
       const sidebarMenu = [
-        { path: '/home', buttonName: 'Home', page: 'home', icon: AiOutlineHome },
-        { path: '/boards', buttonName: 'Boards', page: 'boards', icon: AiOutlineCreditCard },
-        { path: '/templates', buttonName: 'Templates', page: 'templates', icon: AiOutlineBuild },
-        { path: '/settings', buttonName: 'Settings', page: 'settings', icon: AiOutlineSetting }
+        { id: '1', path: '/home', buttonName: 'Home', page: 'home', icon: AiOutlineHome },
+        { id: '2', path: '/boards', buttonName: 'Boards', page: 'boards', icon: AiOutlineCreditCard },
+        { id: '3', path: '/templates', buttonName: 'Templates', page: 'templates', icon: AiOutlineBuild },
+        { id: '4', path: '/settings', buttonName: 'Settings', page: 'settings', icon: AiOutlineSetting }
       ];
+      
 
       return (
         <>
@@ -43,8 +44,8 @@ const withSidebar = (App, props) => {
           <Box display="flex" mt="2%">
             <Box height="80vh" width="20vw" boxShadow="base" rounded="lg" p="1em" ml="20px">
               <Box display="flex" flexDirection="column">
-                {sidebarMenu.map((menu, index) => (
-                  <Link href={menu.path} key={index}>
+                {sidebarMenu.map((menu) => (
+                  <Link href={menu.path} key={menu.id}>
                     <Button
                       mt="5px"
                       mb="5px"

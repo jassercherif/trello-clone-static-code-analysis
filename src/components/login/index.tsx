@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   Flex,
   Box,
@@ -14,7 +13,7 @@ import {
   AlertTitle,
   AlertIcon
 } from '@chakra-ui/react';
-import { useState } from 'react';
+import React,{ useState } from 'react';
 import checkEnvironment from '@/util/check-environment';
 import { useRouter } from 'next/router';
 import inviteUser from '@/util/invite-user';
@@ -26,7 +25,7 @@ const Login = () => {
   });
 
   const [isFetching, setIsFetching] = useState(false);
-  const [hasError, setErrorState] = useState(false);
+  const [hasError, setHasError] = useState(false);
 
   const host = checkEnvironment();
   const router = useRouter();
@@ -72,7 +71,7 @@ const Login = () => {
     }
 
     if (response.status === 404) {
-      setErrorState(true);
+      setHasError(true);
     }
   };
 
@@ -96,7 +95,7 @@ const Login = () => {
           position="absolute"
           right="8px"
           top="8px"
-          onClick={() => setErrorState(!hasError)}
+          onClick={() => setHasError(!hasError)}
         />
       </Alert>
     );
