@@ -45,21 +45,19 @@ const UserNavBar: FC = () => {
   const renderButtons = () => {
     if (user?.isValid) {
       return (
-        <>
-          <Menu>
-            <MenuButton size="xs" mr="5px">
-              <Avatar
-                size="sm"
-                name={user?.fullName}
-                color="white"
-                src="https://bit.ly/tioluwani-kolawole"
-              />
-            </MenuButton>
-            <MenuList>
-              <MenuItem onClick={logout}>Log out</MenuItem>
-            </MenuList>
-          </Menu>
-        </>
+        <Menu>
+          <MenuButton size="xs" mr="5px">
+            <Avatar
+              size="sm"
+              name={user?.fullName}
+              color="white"
+              src="https://bit.ly/tioluwani-kolawole"
+            />
+          </MenuButton>
+          <MenuList>
+            <MenuItem onClick={logout}>Log out</MenuItem>
+          </MenuList>
+        </Menu>
       );
     }
 

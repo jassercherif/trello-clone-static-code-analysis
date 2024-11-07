@@ -1,6 +1,6 @@
-projectKey=samp
+projectKey=trello-clone-static-code-analysis
 serverUrl=http://localhost:9000
 serverVersion=10.7.0.96327
-dashboardUrl=http://localhost:9000/dashboard?id=samp
-ceTaskId=83f1860c-ee63-4a03-a7e9-8bab72de76c1
-ceTaskUrl=http://localhost:9000/api/ce/task?id=83f1860c-ee63-4a03-a7e9-8bab72de76c1
+dashboardUrl=http://localhost:9000/dashboard?id=trello-clone-static-code-analysis
+ceTaskId=8556a467-b8f8-4065-bb2c-ae4cad5b1319
+ceTaskUrl=http://localhost:9000/api/ce/task?id=8556a467-b8f8-4065-bb2c-ae4cad5b1319

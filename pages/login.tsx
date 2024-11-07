@@ -10,11 +10,11 @@ LoginPageWithStore.getInitialProps = async (ctx) => {
 
   const userDetails = isValidUser(ctx);
 
-  if (userDetails && userDetails.isValid) {
+  // Using optional chaining for accessing `userDetails?.isValid`
+  if (userDetails?.isValid) {
     ctx.res.writeHead(307, {
       Location: '/home'
     });
-
     ctx.res.end();
   }
 
